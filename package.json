@@ -30,7 +30,8 @@
 		"format": "prettier --plugin-search-dir=. --write .",
 		"lint": "eslint .",
 		"pre-commit": "lint-staged",
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"deploy": "aws s3 cp dist/ s3://golev-com/ --recursive"
 	},
 	"dependencies": {
 		"@astrojs/rss": "3.0.0",
