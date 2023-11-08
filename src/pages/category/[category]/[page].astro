@@ -3,7 +3,7 @@ import BaseLayout from '@/layouts/BaseLayout'
 import ListPosts from '@/components/ListPosts'
 import ListCategories from '@/components/ListCategories'
 import TitlePage from '@/components/TitlePage'
-import { sluglify, unsluglify, getCategories, getPosts } from '@/utils'
+import { sluglify, unsluglify, getCategories, getPosts, findOriginalString } from '@/utils'
 import { siteConfig } from '@/data/site.config'
 import Pagination from '@/components/Pagination'
 
@@ -25,15 +25,19 @@ export async function getStaticPaths({ paginate }: any) {
 		})
 	})
 }
+
 const params = Astro.params
 const { page } = Astro.props
 
 const unsluglifyNameCategory = unsluglify(params.category!.toLowerCase())
 const posts = page.data
+
+const categories = await getCategories()
+const categoryName = findOriginalString(categories, unsluglifyNameCategory)
 ---
 
 <BaseLayout title={params.category}>
-	<TitlePage title={unsluglifyNameCategory} />
+	<TitlePage title={categoryName} />
 	<ListCategories activeCategory={params.category} />
 	<ListPosts posts={posts} />
 	<Pagination page={page} />
