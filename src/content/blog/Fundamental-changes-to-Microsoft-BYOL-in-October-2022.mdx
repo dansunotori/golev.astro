@@ -1,0 +1,122 @@
+---
+heroImage: >-
+  /src/assets/images/730740-366-25bd-4f43-5c807657e8f_cd8aab23-3b24-423b-9d79-ab1e9b0c323b.jpeg
+category: FinOps and ITAM
+description: Microsoft Licensing Updates and More - October 2022
+pubDate: 2022-10-04T23:00:00.000Z
+tags:
+  - SAMexpert
+  - Licensing
+  - Microsoft
+title: Fundamental changes to Microsoft BYOL in October 2022
+---
+
+## Here's what we included in our digest today:
+
+- The most critical Microsoft licensing updates that may affect us all
+- Flexible Virtualisation is the new "Bring Your Own License"
+- Good and bad news for services providers, hosting, outsourcing
+- CSP-Hosting – an alternative to SPLA?
+- What's new on SAMexpert TV
+- Upcoming live streams on SAMexpert TV
+- New guide: Windows Server licensing in SPLA
+- Updated guides: Microsoft Enterprise Agreement, Microsoft CSP explained, Microsoft SPLA
+
+## What has changed in Microsoft licensing for end clients?
+
+### Hosting Windows 11 and Microsoft 365 apps
+
+Previously, you had a limited choice of only "QMTH" service providers if you wanted to host Windows 11 virtual machines and Microsoft 365 apps (Office 365) elsewhere.
+
+From October 2022, you may deploy them on any shared hosting platform except AWS, GCP, and Alibaba. Azure is also in the restricted list, also known as "Listed Providers", but with the usual caveats of it being Microsoft's own backyard.
+
+This also means that all service providers, except for the aforementioned four, may now host Windows 11 and Office Pro Plus (Microsoft 365 apps). QMTH is effectively obsolete.
+
+These terms only apply to User Subscription Licences. Check the updated terms here:
+
+- [Microsoft 365 Applications](https://www.microsoft.com/licensing/terms/productoffering/Microsoft365Applications/EAEAS) (you may find that the official terms are [a little ambiguous](https://youtube.com/shorts/OJzEA8ayoKA?feature=share))
+- [Windows 11](https://www.microsoft.com/licensing/terms/productoffering/WindowsDesktopOperatingSystem/EAEAS)
+
+### VDA add-on requirement is obsolete
+
+Users licensed with Windows 11 that don't have a primary device with a Qualifying OS don't require VDA add-on licences to access remote instances of Windows anymore. Rejoice, Chromebook devotees!
+
+### Virtually all products received BYOL rights on third-party hosting
+
+Before October 2022:
+
+- You could only bring your own licenses with License Mobility through Software Assurance on shared hosting. The same limitation applied to dedicated hardware on "Listed Providers" (AWS, GCP, Alibaba and Azure). The limited list of products did not include, for example, Windows Server, Office Professional Plus, Office Standard, Visio and Project.
+- You had to ensure that the provider is an Authorised License Mobility Partner. So, even your choice of providers was limited.
+
+From October 2022:
+
+- AWS, GCP, Alibaba and Azure are still limited to License Mobility, as before. Of course, Azure has additional backdoors like Azure Hybrid Use Benefit, as before.
+- All the other providers don't require License Mobility Partnership to host your licenses. Your choice of hosting providers, to which you may bring your own licenses, has become virtually unlimited.
+- The new BYOL rights are granted by Flexible Virtualisation Benefit, which includes all Microsoft software. Please read this email further to learn more about Flexible Virtualisation.
+
+### Windows Server Standard and Windows Server Datacenter per-VM licensing
+
+Finally, Windows Server may be licensed per VM, like SQL Server.
+
+These are the basics:
+
+- It works both on-premises and on hosting (see the next chapter),
+- Licenses must be either subscription licenses or licenses with Software Assurance,
+- You must have enough subscription CALs or CALs with Software Assurance,
+- You must assign at least eight core licenses to a virtual machine,
+- You must have at least 16 core licences in total in your entitlement portfolio.
+
+### Windows Server Standard and Windows Server Datacenter BYOL
+
+Windows Server has never before had "Bring-Your-Own-License" rights in the Cloud, except for Azure. Now it does.
+
+For many, it may be a game-changer. You are no more restricted to Azure if you need to reduce the cost of your Cloud migration.
+
+The rights are granted, as you may have guessed, by the new Flexible Virtualisation Benefit.
+
+These are the basics:
+
+- Licenses must be either subscription licenses or licenses with Software Assurance,
+- You must have enough subscription CALs or CALs with Software Assurance,
+- You must assign at least eight core licenses to a virtual machine,
+- You must have at least 16 core licences in total in your entitlement portfolio.
+
+You can read more about licensing Windows Server on hosting in our article here: [Licensing Microsoft Windows Server in SPLA](https://samexpert.com/microsoft-windows-server-spla-licensing/).
+
+### Windows Server Datacenter is available in CSP as a subscription
+
+As it says in the heading, Windows Server Datacenter subscription is now available in CSP.
+
+### Windows 11 on-premises VDI for CSP licenses
+
+Yes, it is now permitted too. It was one of the most annoying limitations of CSP.
+
+### Flexible Virtualization Benefit
+
+Customers with subscription licenses or Licenses with active [Software Assurance](https://samexpert.com/what-is-software-assurance-mistakes-to-avoid/) (including CALs) may use licensed copies of the software on devices, including shared Servers, that are under the day-to-day management and control of Authorized Outsourcers.
+
+The above quote is from [Universal License Terms](https://www.microsoft.com/licensing/terms/product/ForallSoftware/MCA).
+
+Let's explain the term "Authorized Outsourcer" using another quote:
+
+Authorized Outsourcer means any third-party service provider that is not a Listed Provider and is not using Listed Provider as a Data Center Provider as part of the outsourcing service.
+
+Simply, it's any service provider except AWS, GCP, Azure and Alibaba. Azure has its own backdoors and \[unfair?] competitive advantages, but let's not discuss them here.
+
+Suppose you have subscription licenses or licenses with active [Software Assurance](https://samexpert.com/what-is-software-assurance-mistakes-to-avoid/). In that case, you have a right to ask your services provider to bring those licenses to their data centre and use them in any hosted environment: shared (multi-tenant) or dedicated (single-tenant).
+
+- There is no limit on the type of environment. Both shared, and dedicated environments are included.
+- All Microsoft software available as subscriptions or licenses with Software Assurance is included.
+
+You can read more about it here:
+
+- In our article about [Flexible Virtualization](https://samexpert.com/flexible-virtualization/),
+- [Universal Licensing Terms for all Software](https://www.microsoft.com/licensing/terms/product/ForallSoftware/EAEAS).
+
+## What has changed for service providers? And what is a CSP Hoster?
+
+- Unless you are a Listed Provider, you don't need License Mobility Partnership or QMTH to host your end-client licenses anymore.
+- If you already have QMTH, you may apply to become a [CSP Hoster](https://samexpert.com/csp-hoster/). Note that it isn't required to host CSP licenses. It merely grants you. access to installation media and keys to pre-build VMs and solutions. Is it a benefit? Of course. But it is a business benefit, letting you be more dynamic.
+- If you host your end-client workloads on AWS, GCP, Alibaba and Azure, you will have to stop reporting DCL-eligible SPLA licences from October 01, 2025. You have three years to make changes to your processes.
+
+Read [more about SPLA updates here](https://samexpert.com/microsoft-spla-changes-and-updates/).

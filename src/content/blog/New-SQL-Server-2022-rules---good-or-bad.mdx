@@ -1,0 +1,215 @@
+---
+heroImage: >-
+  /src/assets/images/3433ae1-e23b-f5b1-1eb2-1d062a70b776_Newsletter_January_2023.webp
+category: FinOps and ITAM
+description: Microsoft Licensing Updates and More – January 2023 – SAMexpert Digest
+pubDate: 2023-01-05T00:00:00.000Z
+tags:
+  - SAMexpert
+  - Licensing
+  - Microsoft
+title: New SQL Server 2022 rules - good or bad?
+---
+
+## Summary of Q4/2022
+
+- No significant updates in November 2022 or January 2023.
+- December 2022 brought us SQL Server 2022, which introduced significant, almost breaking, changes to the SQL Server licensing and procurement.
+
+## Here's what we included in our digest today:
+
+- SQL Server 2022: new licensing rules and new economics
+- Introducing SAMexpert.Academy
+- New guides:
+- What licensing agreement to choose in 2023?
+- Top SQL Server Cost Optimisation Tips
+- Six things to do today to optimise Azure costs
+- Azure Savings Plans vs Reserved Instances
+- Updated guides:
+- Microsoft Unified Support explained
+- Microsoft licensing in containers
+- What's new on SAMexpert TV
+- Upcoming live streams on SAMexpert TV
+
+## Microsoft SQL Server 2022
+
+Microsoft added the new version to Product Terms in December 2022.
+
+This version introduced the following critical changes:
+
+Critical, may affect your budgets negatively:
+
+- Requirement for Software Assurance to license SQL Server per core per virtual machine.
+- Updated and clarified requirements that Client Access Licenses must also have active Software Assurance for any Software Assurance benefits.
+
+Potentially positive, helping reduce costs:
+
+- When SQL Server is licensed per virtual machine, SQL Server containers inside the virtual machine are unlimited.
+- SQL Server with Azure Arc is the de-facto first pay-as-you-go Microsoft software to deploy on-premises.
+- SQL Fail-over rights have been granted to Azure pay-as-you-go managed instances and virtual machines.
+
+We conducted a [live Q\&A session in December](https://youtu.be/OcZlq4IayLk), where we detailed all the updates.
+
+It is essential to mention that the changes are not retrospective and do not affect licenses for previous SQL Server versions.
+
+Some bits that you may easily overlook and that frustrate experienced license managers and licensing experts:
+
+- SQL Server Standard 2022 may not be licensed per VM using SQL Server licenses without Software Assurance. The only alternative way to deploy SQL Server Standard in a VM is to license the host with SQL Server Enterprise.
+- The unlimited containers rule only applies to VMs licensed per VM with core licenses. No such discount applies to:
+- Licensing the host with SQL Server Enterprise, with Software Assurance or without,
+- Licensing VMs per Server/CAL.
+
+As for the Azure Arc-enabled SQL Server instances, we will update you when we clearly understand the cons and pros of the new pay-as-you-go economics.
+
+## Thoughts on the SQL Server economics
+
+The Software Assurance requirement for per-VM licensing may hit small businesses and large retail networks that use mini-datacentres in stores and remote locations with minimal virtualisation.
+
+If previously they could save on using single-host deployments with SQL Server virtual machines that did not require Software Assurance, now Software Assurance subscription cost will have to be considered. Of course, they also can "de-virtualise" SQL Server, but that would increase the number of core licenses required from 4 minimum cores per VM to somewhere around 16 core licences for an average "branch-grade" server. Not nice.
+
+The only other alternative they have is to remain on SQL 2019 for a few more years.
+
+## Azure SQL Fail-over
+
+It's definitely a positive change. Azure pay-as-you-go managed instances and virtual machines with SQL Server were finally granted the rights for free-of-charge fail-over instances for High Availability and Disaster Recovery, thus reducing licensing costs in Azure.
+
+You can read more about it in our article [SQL Server Cost Optimisation: Proven Tips](https://samexpert.com/sql-server-cost-optimisation-tips/).
+
+## A little more on SQL Server containers
+
+SQL Server 2022 and later
+
+The terms depend on whether your licences have Software Assurance or subscription.
+
+If you have Software Assurance or the licences are subscription licenses:
+
+- Containers deployed inside the physical operating system are treated as virtual machines. When you count licenses for SQL Server, treat each such container as a virtual machine regardless of if it is "Hyper-V isolated" or not.
+- If you license SQL Server per virtual machine, then you don't need to count containers inside the licensed virtual machines. The number of instances and containers inside a licensed VM is unlimited.
+
+If you do NOT have Software Assurance or subscription (perpetual license only):
+
+- You may not license SQL Server 2022 per virtual machine or container. It would require Software Assurance. So, you may only assign perpetual licenses to the physical cores.
+- Effectively, the above means that you may not deploy SQL Server 2022 Standard in a virtual machine or container unless you license the server with SQL Server Enterprise per physical core.
+- The old rules apply to the servers licensed with SQL Server Enterprise per physical core. See the next sub-chapter below.
+
+Versions before SQL Server 2022
+
+For SQL Server licensing, each container equals an operating system environment. Therefore, when you count licenses for SQL Server, treat each container as a virtual machine regardless of if it is "Hyper-V isolated" or not.
+
+It affects the following:
+
+- The limit on the number of operating system environments when you don't have Software Assurance for SQL Server Enterprise licenses assigned to hosts,
+- Counting OSEs,
+- Counting unlimited instances inside an OSE,
+- And all the other aspects of SQL Server licensing.
+
+You can read more about [container licensing in our updated article](https://samexpert.com/windows-server-sql-server-licensing-in-containers-2/).
+
+## Updates on our YouTube channel
+
+Here is what you may have missed but can watch recorded:
+
+- [Microsoft Licensing for Hosting - what's changed in October](https://youtu.be/UQhsDiaSQ0M)
+- [Microsoft Enterprise Agreement training](https://youtu.be/TgnVrieh220)
+- [What awaits Service Providers and SaaS in 2023](https://youtu.be/IhiYBkZI9Yc)
+- [December 2022 licensing update: SQL, BizTalk, Azure DevOps](https://youtu.be/OcZlq4IayLk)
+- [Microsoft Contract Optimisation and Negotiation Q\&A Dec 2023](https://youtu.be/sPPjWa7VYgA)
+- [Microsoft SQL Server 2022 licensing training](https://youtu.be/Bq_Ejc6AUaY)
+- [January 2023 licensing update and Q\&A](https://youtu.be/qBGmk8R3AjY) - in a few minutes!
+- [Service Provider Q\&A](https://youtu.be/7fBU4gMEnM8)
+- [Microsoft Contract Negotiation Q\&A dedicated to Unified Support](https://youtu.be/hJ1ZhHYUSao)
+- [Microsoft Licensing in Azure - Training](https://youtu.be/gXz5obTiZQI)
+
+## New guide: What Microsoft Licensing Agreement to choose in 2023?
+
+If you work in IT procurement or are responsible for digital transformation strategy, choosing the correct licensing agreements is probably one of your top priorities. And if it isn't, it should become one.
+
+Why? Most current Microsoft licensing agreements require one- or three-year commitments, whether through the contractual term or the pricing and subscription rules.
+
+Microsoft CSP is still pitched as the most flexible agreement, but since March 2022, monthly subscription plans have been made 20% more expensive than the annual options. Can your budget still afford that without reviewing the licensing strategy?
+
+Choosing a "less ideal" agreement may lock you with unfavourable terms for the duration of the subscription and affect your bottom line.
+
+Chapter shortcuts:
+
+- [Large and medium-large organisations](https://samexpert.com/what-microsoft-agreement-to-choose-in-2023/#large-and-medium-large-organisations)
+- [Organisations between 500 and 2400 employees](https://samexpert.com/what-microsoft-agreement-to-choose-in-2023/#organisations-between-500-and-2400-employees)
+- [Organisations below 500 seats](https://samexpert.com/what-microsoft-agreement-to-choose-in-2023/#organisations-below-500-seats)
+
+## New guide: SQL Server Cost Optimisation: Proven Tips
+
+Are you looking to optimise the costs of your on-premises and cloud-based SQL Server without compromising on your business needs and the benefits of one of the most popular database servers?
+
+If so, you're not alone. Many organisations struggle with the costs associated with licensing and maintaining their SQL Server environments. For many, especially in finance, production and retail, SQL Server is a significant portion of their overall [Microsoft Enterprise Agreement](https://samexpert.com/what-is-a-microsoft-enterprise-agreement/) and [Microsoft Azure expenses](https://samexpert.com/six-easy-tips-to-optimise-costs-in-azure/).
+
+Let's explore several cost optimisation tips for SQL Server licensing and maintenance costs, both on-premises and in the cloud. We have been successfully applying these cost-optimisation approaches ourselves for over 15 years.
+
+Most of these will work for you whether you are a small business or a Fortune 500 company.
+
+Chapter shortcuts:
+
+- [You probably don't need SQL Server Enterprise](https://samexpert.com/sql-server-cost-optimisation-tips/#you-probably-don-t-need-sql-server-enterprise)
+- [Use SQL Server Developer for non-production workloads](https://samexpert.com/sql-server-cost-optimisation-tips/#use-sql-server-developer-for-non-production-workloads)
+- [Be careful with Unlimited Virtualisation](https://samexpert.com/sql-server-cost-optimisation-tips/#be-careful-with-unlimited-virtualisation)
+- [SQL Server Consolidation: Virtualisation](https://samexpert.com/sql-server-cost-optimisation-tips/#sql-server-consolidation-virtualisation)
+- [SQL Server consolidation in one OSE](https://samexpert.com/sql-server-cost-optimisation-tips/#sql-server-consolidation-in-one-ose)
+- [Hardware clusters are underrated](https://samexpert.com/sql-server-cost-optimisation-tips/#hardware-clusters-are-underrated)
+- [SQL Server Fail-over benefit, on-premises and in the cloud](https://samexpert.com/sql-server-cost-optimisation-tips/#sql-server-fail-over-benefit-on-premises-and-in-the-cloud)
+- [Exclude bundled SQL Server licenses](https://samexpert.com/sql-server-cost-optimisation-tips/#exclude-bundled-sql-server-licenses)
+- [Consider Server and Cloud Enrollment carefully](https://samexpert.com/sql-server-cost-optimisation-tips/#consider-server-and-cloud-enrollment-carefully)
+- [Consider Azure Hybrid Use Benefit but without high expectations](https://samexpert.com/sql-server-cost-optimisation-tips/#consider-azure-hybrid-use-benefit-but-without-high-expectations)
+- [Be very careful with concessions](https://samexpert.com/sql-server-cost-optimisation-tips/#be-very-careful-with-concessions)
+
+## New guide: Six things you can do today to optimise costs in Azure
+
+With inflation rising and recession becoming more likely, the hunt for bottom-line savings is on. We have a true gem for you today: reducing your public cloud spending.
+
+We will show you how to make a small investment and make it count within 30 days or less.
+
+Chapter shortcuts:
+
+- [Tip](https://samexpert.com/six-easy-tips-to-optimise-costs-in-azure/#tip-1-delete-orphaned-resources-and-vms) #1. Delete orphaned resources and VMs
+- [Tip](https://samexpert.com/six-easy-tips-to-optimise-costs-in-azure/#tip-2-modernise-your-vms) #2. Modernise your VMs
+- [Tip](https://samexpert.com/six-easy-tips-to-optimise-costs-in-azure/#tip-3-right-size-your-vms) #3. Right-size your VMs
+- [Tip](https://samexpert.com/six-easy-tips-to-optimise-costs-in-azure/#tip-4-right-tier-your-storage) #4. Right-tier your storage
+- [Tip](https://samexpert.com/six-easy-tips-to-optimise-costs-in-azure/#tip-5-use-azure-savings-plans) #5. Use Azure Savings Plans
+- [Tip](https://samexpert.com/six-easy-tips-to-optimise-costs-in-azure/#tip-6-the-q4-2022-gambit) #6. The Q4/2022 gambit
+
+## New guide: Azure Savings Plans vs Reserved Instances
+
+Microsoft added Savings Plans for compute, an offering that AWS pioneered in 2019. Savings Plans are a novel way within Azure to reduce the rates you pay for various compute-based services. They will augment and, in our opinion, eventually replace many of the Reserved Instances we have been using in the past years.
+
+In the following thousand+ words, we will help you understand what the new Savings Plans bring, how you can benefit from them and where you need to be on the lookout to prevent bad awakenings.
+
+Chapter shortcuts:
+
+- [What is an Azure Savings Plan?](https://samexpert.com/azure-savings-plans-vs-reserved-instances/#what-is-an-azure-savings-plan)
+- [Should I take this new offer seriously?](https://samexpert.com/azure-savings-plans-vs-reserved-instances/#should-i-take-this-new-offer-seriously)
+- [So, does this end Reserved Instances?](https://samexpert.com/azure-savings-plans-vs-reserved-instances/#so-does-this-end-reserved-instances)
+- [Can you mix Savings Plans with Reserved Instances?](https://samexpert.com/azure-savings-plans-vs-reserved-instances/#can-you-mix-savings-plans-with-reserved-instances)
+- [When are Savings Plans the better choice?](https://samexpert.com/azure-savings-plans-vs-reserved-instances/#when-are-savings-plans-the-better-choice)
+- [When are Reserved Instances the better choice?](https://samexpert.com/azure-savings-plans-vs-reserved-instances/#when-are-reserved-instances-the-better-choice)
+- [On commitments](https://samexpert.com/azure-savings-plans-vs-reserved-instances/#on-commitments)
+- [Summary](https://samexpert.com/azure-savings-plans-vs-reserved-instances/#summary)
+- [What to do?](https://samexpert.com/azure-savings-plans-vs-reserved-instances/#what-to-do)
+
+## Significantly updated: Microsoft Unified Support Guide
+
+- [What is Microsoft Unified Support](https://samexpert.com/microsoft-unified-vs-premier-support/#what-is-microsoft-unified-support)
+- [What is included in Unified Support?](https://samexpert.com/microsoft-unified-vs-premier-support/#what-is-included-in-unified-support)
+- [What’s a Base Package vs Additional and Enhanced services?](https://samexpert.com/microsoft-unified-vs-premier-support/#what-s-a-base-package-vs-additional-and-enhanced-services)
+- [Unified Support Severity levels](https://samexpert.com/microsoft-unified-vs-premier-support/#unified-support-severity-levels)
+- [What's the difference between Premier Support and Unified Support?](https://samexpert.com/microsoft-unified-vs-premier-support/#what-s-the-difference-between-premier-support-and-unified-support)
+- [Unified Support cost](https://samexpert.com/microsoft-unified-vs-premier-support/#unified-support-cost)
+- [Is Microsoft Unified Support worth it?](https://samexpert.com/microsoft-unified-vs-premier-support/#is-microsoft-unified-support-worth-it)
+- [Negotiating a Unified Support contract](https://samexpert.com/microsoft-unified-vs-premier-support/#negotiating-a-unified-support-contract)
+- [Market alternatives to Microsoft Unified Support](https://samexpert.com/microsoft-unified-vs-premier-support/#market-alternatives-to-microsoft-unified-support)
+- [Frequently asked questions about Microsoft Unified Support](https://samexpert.com/microsoft-unified-vs-premier-support/#frequently-asked-questions-about-microsoft-unified-support)
+
+## Updated due to SQL Server changes: Licensing Microsoft Servers in Containers
+
+- [But what is a container anyway?](https://samexpert.com/windows-server-sql-server-licensing-in-containers-2/#but-what-is-a-container-anyway)
+- [Windows Server](https://samexpert.com/windows-server-sql-server-licensing-in-containers-2/#windows-server)
+- [SQL Server](https://samexpert.com/windows-server-sql-server-licensing-in-containers-2/#sql-server)
+
+And that concludes our January 2023 update. Please let us know if you have any suggestions, questions, or business enquiries. You can also follow our social channels – we'd appreciate that. Thank you!
