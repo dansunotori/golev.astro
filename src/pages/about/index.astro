@@ -1,12 +1,22 @@
 ---
+import { Image } from 'astro:assets'
 import TitlePage from '@/components/TitlePage'
 import BaseLayout from '@/layouts/BaseLayout'
+import myImage from '../../assets/images/961A0753.webp'
 ---
 
 <BaseLayout title='Home'>
 	<TitlePage title='About me' />
 
 	<article class='max-w-full w-full'>
+		<div>
+			<Image
+				loading='eager'
+				class='h-auto max-w-full my-8 rounded-md'
+				src={myImage}
+				alt='Alexander Golev, the sexiest ITAM consultant in the world.'
+			/>
+		</div>
 		<div class='prose prose-lg md:prose-xl dark:prose-invert mb-12 min-w-full'>
 			<p>
 				Hello! I'm Alexander Golev, an entrepreneur passionate about clear communication and genuine
