@@ -34,7 +34,7 @@
 		"deploy": "aws s3 cp dist/ s3://golev-com/ --recursive"
 	},
 	"dependencies": {
-		"@astrojs/rss": "4.0.2",
+		"@astrojs/rss": "4.0.5",
 		"astro": "^3.6.4"
 	},
 	"devDependencies": {
