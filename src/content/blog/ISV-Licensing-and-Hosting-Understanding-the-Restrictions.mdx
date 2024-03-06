@@ -1,0 +1,58 @@
+---
+heroImage: /src/assets/images/SPLA and ISV on hosting.jpg
+category: FinOps and ITAM
+description: >-
+  ISV licenses come with specific hosting restrictions for service providers.
+  Understand the rules around dedicated hardware, sublicensing agreements, and
+  limited usage.
+pubDate: 2024-03-06T00:00:00.000Z
+tags:
+  - Hosting
+  - Licensing
+  - Microsoft
+  - ISV
+  - SPLA
+title: 'ISV Licensing and Hosting: Understanding the Restrictions'
+---
+
+<iframe
+	width='560'
+	height='315'
+	src='https://www.youtube.com/embed/NFJFrdwi5u4?si=NFswOMAf0YHWsXOm'
+	title='YouTube video player'
+	frameborder='0'
+	allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+	allowfullscreen
+	loading='lazy'
+/>
+
+ISV (Independent Software Vendor) licenses present unique challenges for service providers offering hosting services. Here's what you need to know:
+
+## ISV Licensing Basics
+
+- ISV licensing involves Microsoft software bundled with a third-party solution (e.g., SAP ERP with Microsoft SQL Server). This bundle is referred to as a Unified Solution.
+- ISV licenses can only be used with the specific Unified Solution.
+- ISV licenses must reside on dedicated physical hardware – no shared environments or virtualization.
+- You cannot use ISV licenses to provide general hosting services.
+
+## Hosting End-User ISV Licenses
+
+- End-users can bring their ISV licenses to dedicated hardware within your infrastructure.
+- This requires a formal addendum to their end-user licensing agreement (EULA).
+- The addendum must:
+  - List all ISV licenses involved.
+  - Explicitly state that the end-user sublicenses the software to you for the sole purpose of hosting their Unified Solution.
+  - Include your agreement to remove all ISV software upon termination of hosting services.
+
+## Sublicensing Considerations
+
+- Remember, the original ISV sublicensed the Microsoft software to the end-user, who then sublicenses it to you, the service provider.
+
+## Additional Notes
+
+- ISV licenses usually lack Software Assurance or similar subscription benefits.
+- This lack of subscription benefits limits License Mobility, reinforcing the need for dedicated servers.
+
+## Key Takeaways
+
+ISV licensing in a [hosting environment](https://samexpert.com/microsoft-spla/) demands strict adherence to dedicated hardware and formal agreements outlining sublicensing terms.
